@@ -40,6 +40,23 @@ public class AddressBook {
         //System.out.println(c);
         lc.add(c);
     }
+     public void editContact() {
+          System.out.println("Enter first name of contact which you wish to edit: ");
+          String firstName = sc.next();
+          boolean flag = false;
+          for (Contacts contact:lc) {
+               if(firstName.equals(contact.getFirstName())){
+                    contact.editContact();
+                    System.out.println("Contact edited");
+                    flag = true;
+                    break;
+               }
+          }
+          if(flag == false){
+               System.out.println("Contact not found");
+          }
+
+     }
 }
 
 

@@ -1,6 +1,9 @@
 package AddressBookUpdated;
 
+import java.util.Scanner;
+
 public class Contacts {
+    Scanner sc = new Scanner(System.in);
     private String firstName;
     private String lastName;
     private String address;
@@ -72,6 +75,34 @@ public class Contacts {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    public void editContact()
+    {
+        System.out.println("Enter first name");
+        String firstName = sc.next();
+        setFirstName(firstName);
+        System.out.println("Enter last name");
+        String lastName = sc.next();
+        setLastName(lastName);
+        System.out.println("Enter address");
+        String address = sc.next();
+        setAddress(address);
+        System.out.println("Enter city");
+        String city = sc.next();
+        setCity(city);
+        System.out.println("Enter state");
+        String state = sc.next();
+        setState(state);
+        System.out.println("Enter zip");
+        String zip = sc.next();
+        setZip(zip);
+        System.out.println("Enter phone");
+        String phone = sc.next();
+        setPhone(phone);
+        System.out.println("Enter email");
+        String email = sc.next();
+        setEmail(email);
+
     }
 
     @Override
